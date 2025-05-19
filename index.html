@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queres ser mi novio??</title>
+    <meta name="viewport" content="width=device-width, user-scalable=No ,initial-scale=1.0
+    , maximu-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="prop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.p1').hover(function(){
+                arriba=Math.random()*(400-1)+1;
+                abajo=Math.random()*(609-1)+1;
+              $(this).css('top', arriba);
+              $(this).css('left', abajo);
+            });
+        });
+    function dijoSi(){
+        document.getElementById('Si').style.display='block';
+    }
+    </script>
+
+    <script>
+    function dijoSi() {
+      // Mostrar el primer mensaje
+      document.getElementById('Si').style.display = 'block';
+
+      // Mostrar el segundo mensaje después de 1 minuto
+      setTimeout(function () {
+        document.getElementById('despues').style.display = 'block';
+      }, 2000); // 1000 ms = 1 segundos
+    }
+  </script>
+
+</head>
+<body>
+    
+        <div class="contenedor">
+             <div class="titulo">
+                <h1>Quieres ser mi novio??</h1>
+            </div>
+        <div class="opciones">
+            <p class="p1">Si</p>
+            <p onclick="dijoSi()" class="p2">No</p>
+            <div id="Si">
+                <h2>Lol, que mal</h2>
+            </div>
+        <div id="despues">
+            <h3>JAJAJAJAJ TE QUIERO xd</h3>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
